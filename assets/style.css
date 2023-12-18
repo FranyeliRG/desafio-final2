@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "nav"
+        "hero-section"
+        "resumen"
+        "biografia"
+        "servicios"
+        "formulario"
+        "temporadas"
+        "footer";
+}
+
+/*NAV*/
+nav {
+    grid-area: nav;
+    background-color: #EEE7DA;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px
+}
+
+.burger {
+    font-size: 25px;
+    color: rgba(188, 145, 34, 0.865);
+    padding-top: 8px;
+}
+
+.menu {
+    display: none;
+}
+
+/*FIN NAV*/
+
+/*Img de fondo con frase - Hero Section*/
+#hero-section {
+    grid-area: hero-section;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(imagenes/colgadero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#hero-section p {
+    font-family: 'Whisper', cursive;
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: center;
+    width: 80%;
+}
+
+#hero-section p:hover{
+    color: rgba(188, 145, 34, 0.865);
+}
+
+/*Fin Img de fondo con frase - Hero Section*/
+
+/*SECTION - Resumen*/
+#resumen {
+    grid-area: resumen;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: 'Roboto Flex', sans-serif;
+    background-color: rgb(242, 241, 235);
+}
+
+/*FIN SECTION 1 - Resumen*/
+
+/*Sobre Mi*/
+#biografia img {
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+h3 {
+    padding-bottom: 20px;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+#biografia {
+    grid-area: biografia;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(218, 226, 218);
+}
+
+#biografia p {
+    padding-top: 30px;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+/*Fin Sobre mi*/
+
+/*SERVICIOS*/
+#servicios {
+    grid-area: servicios;
+    background-color: rgb(242, 241, 235);
+}
+
+#servicios h3 {
+    cursor: pointer;
+}
+
+#servicios h3:hover {
+    color: rgba(188, 145, 34, 0.865);
+}
+
+.servicios1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 5px;
+}
+
+.servicios1 img {
+    border-radius: 10px 10px 10px;
+    opacity: 0.8;
+}
+
+.servicios2 {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 5px;
+}
+
+.servicios2 img {
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+
+/*FIN de SERVICIOS*/
+
+/*FORMULARIO*/
+#form {
+    grid-area: formulario;
+    background-image: url(../assets/imagenes/moda-calida.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: rgb(175, 200, 173);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(175, 200, 173);
+}
+
+/*FIN DE FORMULARIO*/
+
+/*TEMPORADAS*/
+#temporadas {
+    grid-area: temporadas;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: lighter;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+}
+
+.card-header img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    padding-left: 60px;
+    object-fit: cover;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 5px;
+    padding: 6px;
+    color: grey;
+}
+
+/*FIN DE TEMPORADAS*/
+
+/*FOOTER*/
+footer {
+    grid-area: footer;
+    background-color: #EEE7DA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.iconos >a{
+    cursor: pointer;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+}
+
+.iconos > a:hover{
+    color: rgba(188, 145, 34, 0.865);
+}
+
+footer:hover {
+    color: rgba(188, 145, 34, 0.865);
+}
+
+
+@media (min-width: 576px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            "nav hero-section hero-section hero-section"
+            "nav hero-section hero-section hero-section"
+            "nav resumen resumen resumen"
+            "nav biografia biografia biografia"
+            "nav servicios servicios servicios"
+            "nav formulario formulario formulario"
+            "nav temporadas temporadas temporadas"
+            "footer temporadas temporadas temporadas";
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        
+    }
+
+    .burger {
+        display: none;
+    }
+
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        font-family: 'Roboto Flex', sans-serif;
+    }
+
+    .menu ul li{
+        list-style: none;
+        padding-top: 20%;
+    }
+
+    .menu ul li a{
+        text-decoration: none;
+        cursor: pointer;
+        font-size: large;
+        color: #000;
+    }
+
+    .menu ul li a:hover {
+        color: rgba(188, 145, 34, 0.865);
+    }
+
+
+    #resumen {
+        padding: 30px;
+    }
+
+
+    #biografia p {
+        padding: 30px;
+    }
+
+    #servicios {
+        display: flex;
+        padding: 50px;
+    }
+
+    #servicios img {
+        transition-duration: 2s;
+    }
+
+    #servicios img:hover {
+        transform: scale(1.5);
+    }
+
+
+    #temporadas {
+        padding: 10px;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: auto;
+    }
+
+    .card-header>img {
+        transition-duration: 2s;
+
+    }
+
+    .card-header>img:hover {
+        transform: scale(2);
+    }
+
+    .card-body {
+        display: none;
+    }
+
+    footer{
+        background-color: rgb(133, 42, 42);
+        color: #fff;
+    }
+
+    .iconos a{
+        color: #fff;
+    }
+
+}
